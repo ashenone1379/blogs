@@ -72,7 +72,7 @@ A *is-a* B关系意味着:
 - A在逻辑上是B的子集
 - A是B的子类(Subclass), B是A的超类(Superclass)
 
->[!example]
+>[!example] *is-a*关系
 >假设小明是一个大三学生, 那么他的身份可以是:
 >- 本科生
 >- 学生
@@ -82,30 +82,30 @@ A *is-a* B关系意味着:
 >i.e.
 >- An **Undergraduate** *is-a* **Student** 
 >- A **Student** *is-a* **Person** 
->
->反映到Java代码上, 就是使用`extends`关键字的**继承**关系
->```java
->public class Person {
->	public void greeting() {
->		System.out.println("Hi");
->	}
- >   //other attributes...
->}
->
->class Student extends Person {
- >   //other attributes...
->}
->
->class Undergraduate extends Student {
->	private String name = "Xiaoming";
->	@override
->	public void greeting() {
->		System.out.printf("Hi, I am %s.\n", name);
->	}
- >   //other attributes...
->}
->
->```
+
+这样的关系反映到Java代码上, 就是使用`extends`关键字的**继承**关系
+```java
+public class Person {
+	public void greeting() {
+		System.out.println("Hi");
+	}
+   //other attributes...
+}
+
+class Student extends Person {
+   //other attributes...
+}
+
+class Undergraduate extends Student {
+	private String name = "Xiaoming";
+	@override
+	public void greeting() {
+		System.out.printf("Hi, I am %s.\n", name);
+	}
+   //other attributes...
+}
+```
+可以看到，我们希望`Student`类沿用`greeting`方法, 这种情况`Student`直接从父类继承, 避免了代码的重复. 而我们希望`Undergraduate`类改变`greeting`的行为, 于是可以重载`greeting`方法, 重写`greeting`方法的输出内容, 体现了子类继承时的灵活性.
 
 >[!info]- Fun Fact: `Object`类
 >所有的类在定义时, 就算没有指定继承某一个类, 这个类也隐式地继承了`Object`类.
