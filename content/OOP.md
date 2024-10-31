@@ -4,6 +4,7 @@ draft: false
 tags:
 ---
 # 概述
+...
 
 # 封装/Encapsulation
 **封装**是一种接口技术. 把一个数据结构的内部实现隐藏起来, 在外部使用封装好的类通过公开的方法,如`getter`和`setter`实现.
@@ -91,6 +92,6 @@ tags:
 # 参考/Reference
 [CS 61A Spring 2024](https://www.learncs.site/docs/curriculum-resource/cs61a/syllabus)
 
-[CS 61B Spring 2021](https://sp21.datastructur.es/)
+[Hug61B Spring 2019 Edition](https://joshhug.gitbooks.io/hug61b/content/)
 
 [《Java核心技术·卷 I(原书第11版)》](https://reader5.z-library.sk/?source=68900553ec925b7014f2fbf26b679077dac62c4af5cb9d953be0a27e4e750b15&download_location=https%3A%2F%2Fzh.z-lib.gs%2Fdl%2F16271542%2F41e8fe)
