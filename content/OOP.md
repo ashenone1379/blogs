@@ -150,7 +150,7 @@ class teacher extends Person {
 ```
 对于一个`Student`实例`s`, `s instanceof Student`, `s instanceof Person`, `s instanceof Comparable`的结果都为`True`.
 
-此外, 通过下面的输出可以看到, 结果`p`的类型是`Person`, 却也可以指向`Person`的子类对象, 同时根据不同实例的类, 调用了不同的方法.
+此外, 通过下面的输出可以看到, 尽管`p`的类型是`Person`, 却也可以指向`Person`的子类对象, 同时, 根据运行时所指向的不同实例的类型, 正确地调用了不同的方法.
 ```java
 class Main {
     public static void main(String[] args) {
