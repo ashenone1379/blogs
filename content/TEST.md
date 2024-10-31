@@ -39,6 +39,6 @@ $$
 | Form | test |
 | ---- | ---- |
 | 1    | 2    |
-```Cpp
+```c++
 std::cout << "Code block test" << std::endl;
 ```
