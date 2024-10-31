@@ -128,7 +128,7 @@ class Undergraduate extends Student {
 # 多态/Polymorphism
 **多态**允许不同类的对象以相同的方式被处理. 它使得程序可以通过统一的接口操作不同类型的对象，从而提高代码的灵活性和可扩展性. 
 
-多态体现在运行时, 对象的类是多种形式的, 它可以被视为自己类的实例, 父类的实例, 父类的父类的实例..., 还是实现了某个接口的实例.
+多态体现在运行时, 对象的类是多种形式的, 它可以被视为自己类的实例, 父类的实例, 父类的父类的实例..., 还是实现了某个接口的实例. 因此由下面的代码定义的一个`Student`实例`s`, `s instanceof Student`, `s instanceof Person`, `s instanceof Comparable`的结果都为`True`.
 ```java
 public class Person {
     public void speak() {
@@ -140,17 +140,19 @@ class Student extends Person implements Comparable{
     public void speak() {
         System.out.println("I'm a student");
     }
+    //...
 }
 
-class teacher extends Person {
+class Teacher extends Person {
     public void speak() {
         System.out.println("I'm a teacher");
     }
+    //...
 }
 ```
-对于一个`Student`实例`s`, `s instanceof Student`, `s instanceof Person`, `s instanceof Comparable`的结果都为`True`.
 
-此外, 通过下面的输出可以看到, 尽管`p`的类型是`Person`, 却也可以指向`Person`的子类对象, 同时, 根据运行时所指向的不同实例的类型, 正确地调用了不同的方法.
+
+此外, 根据运行时所指向的不同实例的类型, 变量也能够正确地调用不同的方法. 如下面的输出所示, 尽管`p`的类型是`Person`, 却也可以指向`Person`的各个子类对象, 调用相应对象的`speak`方法.
 ```java
 class Main {
     public static void main(String[] args) {
