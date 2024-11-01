@@ -1,3 +1,9 @@
+---
+title: Test
+draft: true
+tags:
+---
+
 >[!info]- Callout test
 >Hey there! This is a test!!!
 
